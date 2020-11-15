@@ -1,0 +1,31 @@
+<div class="row" *ngIf="personaje$ | async as personaje">
+    <div class="col-xs-12 col-sm-6 col-md-4" >
+       <div class=card>
+           <div class=image>
+                    <img
+                        [src]="personaje.image"
+                        [alt]="personaje.name"
+                        class="card-img-top"
+                    />
+           </div>
+           <div class="car-inner">
+               <div class="header">
+                <a [routerLink]="['/detalle-personajes', personaje.id]">
+                <h2>{{personaje.name | slice: 0:15}}</h2></a>
+                <h4 class="text-muted">{{personaje.gender}}</h4>
+                <small class="text-muted">{{personaje.created | date}}</small>
+               </div>
+           </div>
+       </div>
+
+
+
+
+    </div>
+
+  </div>
+  <button 
+  
+  class="btn btn-dark" (click)="irAtras">
+    Ir atras
+  </button>

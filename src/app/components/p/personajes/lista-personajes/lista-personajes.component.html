@@ -1,0 +1,36 @@
+
+<div class="row" >
+    <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let personaje of personajes">
+       <div class=card>
+           <div class=image>
+               <a [routerLink]="['/detalle-personajes', personaje.id]">
+                    <img
+                        [src]="personaje.image"
+                        [alt]="personaje.name"
+                        class="card-img-top"
+                    />
+            </a>
+           </div>
+           <div class="car-inner">
+               <div class="header">
+                <a [routerLink]="['/detalle-personajes', personaje.id]">
+                <h2>{{personaje.name | slice: 0:15}}</h2></a>
+                <h4 class="text-muted">{{personaje.gender}}</h4>
+                <small class="text-muted">{{personaje.created | date}}</small>
+               </div>
+           </div>
+       </div>
+
+
+
+
+    </div>
+    <div
+      class="col-xs-12 col-sm-12 col-md-12 mt-5 container-notFound" *ngIf="personajes.length <= 0 ">
+      <p>No se encontraron resultados!</p>
+    </div>
+  </div>
+  
+  <a href="">
+      <button class="btn btn-dark">Go UP</button>
+    </a>

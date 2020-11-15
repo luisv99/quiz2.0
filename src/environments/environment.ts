@@ -3,7 +3,19 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  APIURL: 'https://rickandmortyapi.com/api/character/',
+  firebase: {
+    apiKey: "AIzaSyBkw6vt71GlyMZavm6IJ0ciMMZGBdR_SeE",
+  authDomain: "quiz2-bd991.firebaseapp.com",
+  databaseURL: "https://quiz2-bd991.firebaseio.com",
+  projectId: "quiz2-bd991",
+  storageBucket: "quiz2-bd991.appspot.com",
+  messagingSenderId: "224326905393",
+  appId: "1:224326905393:web:ed5eb4312bb0c8ac1e6f10",
+  measurementId: "G-W094941D8B"
+  }
+
 };
 
 /*
